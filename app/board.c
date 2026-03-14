@@ -17,6 +17,7 @@ void board_lowlevel_init(void)
 
     RCC_AHBPeriphClockCmd(RCC_AHBPeriph_DMA1, ENABLE);
 
+    //解锁后备区域访问
     PWR_BackupAccessCmd(ENABLE);
     BKP_DeInit();
 

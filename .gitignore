@@ -1,0 +1,33 @@
+# --- Keil MDK 临时与编译生成文件 ---
+*.obj
+*.o
+*.d
+*.crf
+*.dep
+*.htm
+*.lnp
+*.lst
+*.map
+*.build_log.htm
+*.uvgui.*
+*.uvguix.*
+*.txt
+*.bak
+/Listings/
+/Objects/
+
+# --- VS Code / Antigravity 临时文件 ---
+.vscode/
+.history/
+ipch/
+*.VC.db
+*.VC.opendb
+
+# --- 编译输出目录 ---
+Debug/
+Release/
+bin/
+obj/
+
+# --- 其他 ---
+*.uvoptx

@@ -1,6 +1,6 @@
 Dependencies for Project 'stm32f103', Target 'project': (DO NOT MODIFY !)
 CompilerVersion: 5060528::V5.06 update 5 (build 528)::.\ARMCC
-F (..\app\main.c)(0x69B292CA)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\driver -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\driver\st7735 -I ..\driver\esp-at -I ..\driver\mpu6050-ID:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="537" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+F (..\app\main.c)(0x69B4F451)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\driver -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\driver\st7735 -I ..\driver\esp-at -I ..\driver\mpu6050-ID:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="537" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
 I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
 I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588BD7A4)
@@ -43,7 +43,7 @@ I (..\driver\st7735\stfonts.h)(0x66D4582D)
 I (..\driver\st7735\stimage.h)(0x66D45D94)
 I (..\app\weather.h)(0x66CC3E05)
 I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x588BD7A4)
-F (..\app\board.c)(0x69B2884F)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\driver -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\driver\st7735 -I ..\driver\esp-at -I ..\driver\mpu6050-ID:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="537" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\board.o --omf_browse .\objects\board.crf --depend .\objects\board.d)
+F (..\app\board.c)(0x69B4430F)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\driver -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\driver\st7735 -I ..\driver\esp-at -I ..\driver\mpu6050-ID:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="537" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\board.o --omf_browse .\objects\board.crf --depend .\objects\board.d)
 I (..\firmware\cmsis\device\stm32f10x.h)(0x61605444)
 I (..\firmware\cmsis\core\core_cm3.h)(0x61605444)
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
@@ -374,7 +374,7 @@ I (..\firmware\driver\inc\stm32f10x_usart.h)(0x61605445)
 I (..\firmware\driver\inc\stm32f10x_wwdg.h)(0x61605445)
 I (..\firmware\driver\inc\misc.h)(0x61605445)
 I (..\app\main.h)(0x66D43969)
-F (..\driver\Serial.c)(0x65323DA0)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\driver -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\driver\st7735 -I ..\driver\esp-at -I ..\driver\mpu6050-ID:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="537" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\serial.o --omf_browse .\objects\serial.crf --depend .\objects\serial.d)
+F (..\driver\Serial.c)(0x69B4430F)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\driver -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\driver\st7735 -I ..\driver\esp-at -I ..\driver\mpu6050-ID:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="537" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\serial.o --omf_browse .\objects\serial.crf --depend .\objects\serial.d)
 I (..\firmware\cmsis\device\stm32f10x.h)(0x61605444)
 I (..\firmware\cmsis\core\core_cm3.h)(0x61605444)
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)

@@ -47,14 +47,15 @@ static void on_serial_receive(uint8_t data)
     {
         rx_buf[rx_len] = '\0';
         
-        // 解析 T:时间戳 (保留原有逻辑)
-        if (rx_len > 2 && rx_buf[0] == 'T' && rx_buf[1] == ':')
-        {
-            new_timestamp = (uint32_t)atoi(&rx_buf[2]);
-            time_update_req = true;
-        }
-        // 解析 JSON 天气格式 (新逻辑：通过查找 results 判定)
-        else if (strstr(rx_buf, "\"results\"") != NULL)
+        // // 解析 T:时间戳 (保留原有逻辑)
+        // if (rx_len > 2 && rx_buf[0] == 'T' && rx_buf[1] == ':')
+        // {
+        //     new_timestamp = (uint32_t)atoi(&rx_buf[2]);
+        //     time_update_req = true;
+        // }
+
+        //解析 JSON 天气格式 (新逻辑：通过查找 results 判定)
+        if (strstr(rx_buf, "\"results\"") != NULL)
         {
             if (weather_parse(rx_buf, &new_weather))
             {
@@ -76,21 +77,21 @@ static void on_serial_receive(uint8_t data)
             }
         }
         // 解析 W:天气,温度 (保留作为备选)
-        else if (rx_len > 2 && rx_buf[0] == 'W' && rx_buf[1] == ':')
-        {
-            char *comma = strchr(&rx_buf[2], ',');
-            if (comma != NULL)
-            {
-                *comma = '\0';
-                strncpy(new_weather.weather, &rx_buf[2], sizeof(new_weather.weather) - 1);
-                new_weather.weather[sizeof(new_weather.weather) - 1] = '\0';
+        // else if (rx_len > 2 && rx_buf[0] == 'W' && rx_buf[1] == ':')
+        // {
+        //     char *comma = strchr(&rx_buf[2], ',');
+        //     if (comma != NULL)
+        //     {
+        //         *comma = '\0';
+        //         strncpy(new_weather.weather, &rx_buf[2], sizeof(new_weather.weather) - 1);
+        //         new_weather.weather[sizeof(new_weather.weather) - 1] = '\0';
                 
-                strncpy(new_weather.temperature, comma + 1, sizeof(new_weather.temperature) - 1);
-                new_weather.temperature[sizeof(new_weather.temperature) - 1] = '\0';
+        //         strncpy(new_weather.temperature, comma + 1, sizeof(new_weather.temperature) - 1);
+        //         new_weather.temperature[sizeof(new_weather.temperature) - 1] = '\0';
                 
-                weather_update_req = true;
-            }
-        }
+        //         weather_update_req = true;
+        //     }
+        // }
         rx_len = 0;
     }
     else if (data != '\r' && rx_len < RX_CMD_MAX_LEN - 1)
@@ -137,7 +138,7 @@ int main(void)
     delay_ms(500);
 
     st7735_fill_screen(ST7735_BLACK);
-
+    delay_ms(500);
     runms = 0;
     uint32_t last_runms = runms;
     bool weather_ok = false;
